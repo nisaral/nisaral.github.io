@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Keyush Nisar | Uncertainty, LLM Serving, and Evidence for Deployed AI</title>
-  <meta name="description" content="Keyush Nisar — B.Tech AI &amp; ML at D.J. Sanghvi College of Engineering. Research on uncertainty in learned systems, black-box LLM serving, and runtime evidence for multi-agent RAG." />
+  <meta name="description" content="Keyush Nisar — B.Tech AI &amp; ML at D.J. Sanghvi College of Engineering. Research on uncertainty in learned systems, LLM serving, and evidence for deployed AI." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet" />
@@ -60,7 +60,7 @@
     </header>
 
     <section class="stats" aria-label="Highlights">
-      <div class="stat"><b>Kaggle Expert</b><span>Competitions + hosted events</span></div>
+      <div class="stat"><b>Kaggle Expert</b><span>Competitions, datasets, community</span></div>
       <div class="stat"><b>2 papers</b><span>Springer venues, under review</span></div>
       <div class="stat"><b>4 internships</b><span>London, VJTI, US, Mumbai</span></div>
       <div class="stat"><b>CodeAI</b><span>Co-founder &amp; Technical Head</span></div>
@@ -69,56 +69,66 @@
     <section id="about">
       <h2>About me</h2>
       <p>
-        Hi, I’m Keyush Nisar, a researcher and engineer working on <strong>uncertainty in learned systems</strong>,
-        <strong>black-box LLM serving</strong>, and <strong>runtime evidence for deployed AI</strong>.
-        I am pursuing a B.Tech in Artificial Intelligence and Machine Learning at
+        Hi, I’m Keyush Nisar. I work on <strong>uncertainty in learned systems</strong>,
+        <strong>LLM serving</strong>, and <strong>runtime evidence for deployed AI</strong> —
+        the gap between a score that can <em>rank</em> options and a score that is honest enough
+        to be treated as a <em>decision</em>.
+      </p>
+      <p>
+        I am a B.Tech student in Artificial Intelligence and Machine Learning at
         D.J. Sanghvi College of Engineering, University of Mumbai (2023–2027).
-        I have worked with RAI Tracker in London, CoE-CNDS Labs at VJTI, CerebralZip (a VJTI-incubated startup),
-        and EnsanAI, moving between research questions and production constraints.
-        I care about a simple test: whether a score is good enough to <em>rank</em> alternatives, or whether it is
-        honest enough to be treated as a <em>decision</em>. I enjoy collaborating across research and engineering,
-        and I am always open to conversations about graduate study and joint work. Feel free to reach out :)
+        I have worked with RAI Tracker (London), CoE-CNDS Labs at VJTI, CerebralZip, and EnsanAI.
+        At college I co-founded <strong>CodeAI</strong> — DJSCE’s student AIML club — and serve as
+        Technical Head: a workshop for the mathematics, then a project that can be measured.
+        Always open to research conversations. Feel free to reach out :)
       </p>
       <p><strong>Research interests:</strong></p>
       <ul class="interests">
         <li>Uncertainty-preserving distillation in world models, and when a score may be used as a decision</li>
-        <li>Black-box online routing and admission for heterogeneous vLLM replicas</li>
-        <li>Telemetry as evidence of behavioral drift in multi-agent retrieval-augmented systems</li>
+        <li>Online routing and admission for heterogeneous vLLM replicas</li>
+        <li>Telemetry as evidence of behavioral drift in multi-agent systems</li>
       </ul>
       <div class="chips">
         <span class="chip">Uncertainty quantification</span>
         <span class="chip">World models</span>
         <span class="chip">LLM serving</span>
-        <span class="chip">RAG / agents</span>
-        <span class="chip">Trustworthy ML</span>
+        <span class="chip">AI Agents</span>
+        <span class="chip">Harness</span>
       </div>
     </section>
 
     <section id="research">
       <h2>Research</h2>
 
-      <h3>Independent research — Uncertainty-preserving distillation for diffusion world models <span class="when">2026 – Present</span></h3>
-      <p class="org">PyTorch · diffusion models · MBPO / SAC · <a href="https://github.com/nisaral/uncertainty-diffusion-world-models">GitHub</a></p>
-      <ul>
-        <li>Asked whether compressing a diffusion world model into a faster one-step student preserves the <strong>epistemic uncertainty</strong> needed for control, rather than only next-state accuracy.</li>
-        <li>Proved that a natural single-latent teacher–student disagreement match does not uniquely identify epistemic uncertainty; constructed counterexamples and derived a multi-latent objective that separately constrains epistemic and aleatoric components.</li>
-        <li>After tracing and fixing a training-pipeline bug, confirmed that the corrected objective recovers both uncertainty channels in controlled and live SAC experiments, and is now being tested for policy-return gains on a pre-registered harder benchmark.</li>
-      </ul>
+      <h3>Uncertainty-preserving distillation for diffusion world models <span class="when">2026 – Present</span></h3>
+      <p class="org">Independent · <a href="https://github.com/nisaral/uncertainty-diffusion-world-models">GitHub</a></p>
+      <p>
+        The question is whether a fast one-step student of a diffusion world model still carries the
+        <strong>epistemic uncertainty</strong> a controller needs, or only the mean next state.
+        A natural single-latent disagreement match does not uniquely identify that uncertainty;
+        I constructed counterexamples and a multi-latent objective that separates epistemic and aleatoric
+        channels. After a training-pipeline bug was isolated, both channels recover in controlled and live
+        SAC runs. Policy-return transfer on a harder pre-registered benchmark is in progress.
+      </p>
 
-      <h3>MLE Research Intern — RAI Tracker (Responsible Systems Ltd) <span class="when">Apr 2026 – Jul 2026</span></h3>
-      <p class="org">Remote, London, UK · Supervisor: Dr. Rajeev Chakraborty</p>
-      <ul>
-        <li>Studied behavioral drift in multi-agent RAG systems, treating runtime telemetry as primary evidence for how a deployed system behaves across company-defined ethical dimensions.</li>
-        <li>Designed a three-gate validation framework — <strong>instrumentation validity, statistical validity, and evidentiary independence</strong> — that a candidate telemetry signal must pass before it is treated as evidence of an ethical-risk pattern.</li>
-        <li>Built hierarchical OpenTelemetry instrumentation, a system-agnostic telemetry/drift schema, and dashboards that turn traces into experimental verdicts. Continuing the work as a collaborative research manuscript.</li>
-      </ul>
+      <h3>Behavioral evidence in multi-agent systems — RAI Tracker <span class="when">Apr 2026 – Jul 2026</span></h3>
+      <p class="org">Responsible Systems Ltd, London · Supervisor: Dr. Rajeev Chakraborty</p>
+      <p>
+        Runtime traces as the primary evidence of how a deployed multi-agent system behaves across
+        defined ethical dimensions. A candidate telemetry signal has to pass three gates —
+        <strong>instrumentation validity, statistical validity, evidentiary independence</strong> —
+        before it is treated as evidence of an ethical-risk pattern. The stack is OpenTelemetry,
+        a system-agnostic schema, and dashboards that turn traces into experimental verdicts.
+        A collaborative manuscript is in preparation.
+      </p>
 
-      <h3>Generative AI Research Intern — CoE-CNDS Labs, VJTI <span class="when">Feb 2025 – Jan 2026</span></h3>
-      <p class="org">Mumbai, India · Supervisors: Dr. Faruk Kazi, Aum Patil</p>
-      <ul>
-        <li>Fine-tuned <strong>XLM-RoBERTa</strong> with LoRA on a 23-language Indic corpus for low-resource multilingual NLP.</li>
-        <li>Worked on unstructured video understanding through a semantic VideoRAG pipeline, using CLIP-based vision-language representations for keyframe extraction and a rolling-gradient similarity method for temporal matching — work that feeds the VRAG paper below.</li>
-      </ul>
+      <h3>Multilingual NLP and video understanding — CoE-CNDS Labs, VJTI <span class="when">Feb 2025 – Jan 2026</span></h3>
+      <p class="org">Mumbai · Supervisors: Dr. Faruk Kazi, Aum Patil</p>
+      <p>
+        LoRA fine-tuning of <strong>XLM-RoBERTa</strong> on a 23-language Indic corpus for low-resource NLP,
+        and a semantic video-retrieval pipeline using CLIP representations, keyframe extraction,
+        and rolling-gradient similarity for temporal matching on long-form video.
+      </p>
     </section>
 
     <section id="publications">
@@ -129,30 +139,26 @@
         Hierarchical Semantic Retrieval for Long-Form Video Question Answering (VRAG) |
         <span class="venue">The Visual Computer, Springer</span> |
         <span class="status">Under peer review</span>
-        <div class="links">
-          <a href="files/VRAG_paper.pdf">Manuscript</a>
-        </div>
-        <ul>
-          <li>Contributed to a three-level VideoRAG framework (topic → scene → keyframe) for coarse-to-fine evidence localization in long-form video.</li>
-          <li>Formulated the <strong>Gaussian-smoothed keyframe scoring</strong> method used for temporally stable retrieval.</li>
-          <li>Evaluated on 463 videos and 1,103 queries (YouCook2): <strong>42.2% Video R@1</strong>, <strong>57.0% Scene R@3</strong>, a <strong>3.7×</strong> recall gain over flat retrieval.</li>
-        </ul>
+        <p>
+          Coarse-to-fine retrieval over long video: topic → scene → keyframe.
+          My piece was the <strong>Gaussian-smoothed keyframe scoring</strong> used for temporally stable evidence.
+          On 463 videos and 1,103 queries: <strong>42.2% Video R@1</strong>, <strong>57.0% Scene R@3</strong>,
+          a <strong>3.7×</strong> recall gain over flat retrieval.
+        </p>
       </article>
 
       <article class="pub">
         <strong>Keyush Nisar</strong>, Krishil Parikh, Krisha Maisheri, Aruna Gawade, Nilesh T. Rathod, Angelin Florence A.
-        DIO: Black-Box Online Routing for Heterogeneous vLLM Replicas |
+        DIO: Online Routing for Heterogeneous vLLM Replicas |
         <span class="venue">The Journal of Supercomputing, Springer</span> |
         <span class="status">Under review</span>
-        <div class="links">
-          <a href="files/DIO_paper.pdf">Manuscript</a> ·
-          <a href="https://github.com/nisaral/DIO">Code</a>
-        </div>
-        <ul>
-          <li>Led the design of a lightweight OpenAI-compatible gateway over <em>stock</em> vLLM. Dual-timescale NLMS learns per-replica service-time slopes from black-box end-to-end telemetry; no engine patches.</li>
-          <li>Achieved <strong>48.3% lower p99 latency</strong> than Round-Robin under controlled 2× service-time asymmetry, with ~14µs control-plane overhead.</li>
-          <li>Main transferable finding is negative: a model that <em>ranks</em> replicas well can still over-reject ~40% of healthy traffic if its absolute predictions are used as an SLO gate. Ranking and admission have to be separate policies.</li>
-        </ul>
+        <p>
+          First author. An OpenAI-compatible gateway over stock vLLM that learns per-replica service time
+          online and routes without engine patches. Under 2× service-time asymmetry,
+          <strong>48.3% lower p99</strong> than Round-Robin. The result that travels: a model that
+          <em>ranks</em> replicas well can still over-reject healthy traffic if those scores are used
+          as an absolute SLO gate — ranking and admission have to stay separate.
+        </p>
       </article>
     </section>
 
@@ -161,66 +167,69 @@
 
       <h3>Machine Learning Intern — CerebralZip <span class="when">Jul 2026 – Present</span></h3>
       <p class="org">VJTI-incubated startup, Mumbai · government environmental and safety monitoring</p>
-      <ul>
-        <li>Building ML systems for multilingual incident classification, multi-issue detection in a single citizen report, automated department routing, and real-time alerts from noisy field text.</li>
-        <li>Developing time-series forecasting and source-attribution models, with evaluation and inference pipelines for government-facing deployments.</li>
-        <li>Prototyping ALPR / computer-vision pipelines for degraded footage — low light, blur, long distance — combining plate detection with OCR for enforcement workflows.</li>
-      </ul>
+      <p>
+        ML for noisy citizen reports: multilingual incident classification, multi-issue detection,
+        department routing, and alerts. Time-series forecasting and source attribution for
+        environmental monitoring. ALPR on degraded field footage — low light, blur, distance —
+        combining plate detection with OCR.
+      </p>
 
       <h3>AI Production Engineering Intern — EnsanAI <span class="when">Aug 2025 – Apr 2026</span></h3>
       <p class="org">Remote, Delaware, US · healthcare AI</p>
-      <ul>
-        <li>Designed a domain-specific healthcare AI evaluation covering HIPAA-oriented compliance, empathy, behavioral/data drift, and safety metrics across clinical workflows.</li>
-        <li>Deployed production AI microservices on GCP, stress-tested inference, and built an MCP server connecting database and operations tooling to downstream services; reduced inference cost by <strong>35%</strong> and latency by <strong>40%</strong>.</li>
-      </ul>
+      <p>
+        Evaluation for clinical agents: HIPAA-oriented compliance, empathy, drift, and safety.
+        Production microservices on GCP and an MCP server into operations tooling;
+        inference cost down <strong>35%</strong>, latency down <strong>40%</strong>.
+      </p>
     </section>
 
     <section id="projects">
       <h2>Selected projects</h2>
 
       <h3>LM-JEPA for symbolic regression <span class="when"><a href="https://github.com/nisaral/LM-JEPA-for-Symbolic-Regression">GitHub</a></span></h3>
-      <p class="org">PyTorch · representation learning · GSoC 2026 ML4SCI exploration</p>
-      <ul>
-        <li>Adapted Yann LeCun’s Joint Embedding Predictive Architecture from vision into symbolic regression, learning mathematical structure without autoregressive generation.</li>
-      </ul>
+      <p>
+        Joint Embedding Predictive Architecture, moved from vision into symbolic regression:
+        learn the mathematical structure of an expression without generating tokens one by one.
+      </p>
 
       <h3>Voice-first financial agent <span class="when"><a href="https://github.com/nisaral/Finance_Agent">GitHub</a></span></h3>
-      <p class="org">FastAPI · LangGraph · OpenTelemetry</p>
-      <ul>
-        <li>Low-latency WebSocket voice agent with asynchronous streaming and VAD-driven interruption handling; sub-500ms time-to-first-audio.</li>
-        <li>OpenTelemetry traces for end-to-end latency and state transitions across a multi-stage tool-using agent.</li>
-      </ul>
+      <p>
+        Streaming voice agent with interruption handling (sub-500ms time-to-first-audio)
+        and OpenTelemetry across tool-using state transitions.
+      </p>
 
-      <h3>Casual dynamical AI <span class="when"><a href="https://github.com/nisaral/Casual_dynamical_AI">GitHub</a> · 8 stars</span></h3>
-      <p class="org">World models · dynamical systems · PINNs</p>
-      <ul>
-        <li>First-principles notes and experiments on physics, calculus, and probabilistic graphs for agents that reason about structure rather than only next tokens. Currently the most-starred public repository on my GitHub.</li>
-      </ul>
+      <h3>Casual dynamical AI <span class="when"><a href="https://github.com/nisaral/Casual_dynamical_AI">GitHub</a></span></h3>
+      <p>
+        Notes and experiments on physics, calculus, and probabilistic graphs for agents that
+        reason about structure, not only next tokens.
+      </p>
     </section>
 
     <section id="codeai">
-      <h2>CodeAI — ML club at DJSCE</h2>
-      <p class="org">Technical Head, ML Mentor, and Co-founder · Jun 2025 – Present</p>
+      <h2>CodeAI — DJSCE’s student AIML club</h2>
+      <p class="org">Co-founder, Technical Head, and ML mentor · Jun 2025 – Present</p>
       <p>
-        CodeAI is the machine-learning club I co-founded at D.J. Sanghvi. The job is not a title list:
-        it is to make a path into AI/ML that a first-year can actually walk — mathematics, then models,
-        then a project that can be measured.
+        A college club for people who want to enter AI/ML without skipping the mathematics.
+        Mentorship runs from linear algebra and loss geometry into a pipeline that can be evaluated.
+        I taught a <strong>Roadmap to AI/ML</strong> seminar (perceptrons through deep learning),
+        and hosted a Kaggle competition inside the CodeQuest hackathon — <strong>25+ teams</strong>.
       </p>
-      <ul>
-        <li><strong>Mentorship.</strong> I mentor students through the basics of ML mathematics (linear algebra, probability, loss geometry) and then into practical pipelines: data, training, evaluation, and the difference between a demo and a result.</li>
-        <li><strong>Seminar — Roadmap to AI/ML.</strong> I delivered a staged roadmap seminar (perceptrons through deep learning, with a “Deep Learning Adept” phase covering ANNs, CNNs, RNNs, transfer learning, PyTorch/TensorFlow, and a from-scratch CNN milestone). Glimpses from the session are below.</li>
-        <li><strong>CodeQuest Kaggle competition.</strong> As part of the CodeQuest hackathon I hosted a Kaggle competition; <strong>25+ teams</strong> participated. The point was to put club members on a public leaderboard rather than a classroom assignment.</li>
-        <li><strong>Aspira Pathology Lab.</strong> Directed a student team building an AI engine for automated prescription interpretation. I worked on the <strong>OCR stack</strong> and on the plan for an MIS dashboard with AI insights over a 3,500+ test catalog; the interpretation engine reached <strong>92%+ accuracy</strong>.</li>
-      </ul>
+
+      <h3>Industry project <span class="when">Client: Aspira Labs, Mumbai</span></h3>
+      <p>
+        Directed a student team building an AI engine for automated prescription interpretation
+        at Aspira Pathology Lab. I owned the <strong>OCR stack</strong> and the plan for an MIS dashboard
+        with AI insights over a 3,500+ test catalog. Interpretation accuracy: <strong>92%+</strong>.
+      </p>
     </section>
 
     <section id="teaching">
       <h2>Teaching &amp; talks</h2>
       <h3>Roadmap to AI/ML | <em>CodeAI, DJSCE</em></h3>
       <p>
-        A live seminar on how to enter AI/ML without skipping the mathematics. The clips below are short
-        glimpses from the session — podium, slide deck, and the Phase 3 deep-learning block
-        (ANNs / CNNs / RNNs, transfer learning, Hugging Face Transformers, and a ResNet-style classification milestone).
+        Live seminar on entering AI/ML without skipping the mathematics. Short glimpses below —
+        the podium, the deck, and the Phase 3 deep-learning block (ANNs / CNNs / RNNs, transfer learning,
+        Hugging Face Transformers, a from-scratch CNN milestone).
       </p>
       <div class="clips">
         <figure>
@@ -241,36 +250,24 @@
     <section id="opensource">
       <h2>Open source &amp; community</h2>
       <p>
-        GitHub <a href="https://github.com/nisaral">@nisaral</a>: 28 public repositories, 22 followers.
-        Work that is public and worth a look: <a href="https://github.com/nisaral/Casual_dynamical_AI">Casual_dynamical_AI</a> (8 stars),
-        <a href="https://github.com/nisaral/uncertainty-diffusion-world-models">uncertainty-diffusion-world-models</a> (4),
-        <a href="https://github.com/nisaral/DIO">DIO</a> (3).
+        Public work lives on <a href="https://github.com/nisaral">GitHub</a>
+        (<a href="https://github.com/nisaral/uncertainty-diffusion-world-models">world models</a>,
+        <a href="https://github.com/nisaral/Casual_dynamical_AI">dynamical AI notes</a>,
+        <a href="https://github.com/nisaral/Kaggle_notebooks">Kaggle notebooks</a>).
       </p>
       <ul>
         <li>
-          <strong>vLLM Production Stack</strong> —
-          <a href="https://github.com/vllm-project/production-stack/pull/1080">PR #1080</a>
-          <em>(under review)</em>.
-          Router stats bugfix: <code>avg_latency</code> now uses the supplied completion timestamp instead of
-          <code>time.time()</code>, and completed request maps are dropped. Adds a unit test that the latency
-          equals the injected interval.
-        </li>
-        <li>
-          <strong>Evidently AI</strong> —
-          <a href="https://github.com/evidentlyai/evidently/pull/1924">PR #1924</a>
-          <em>(under review)</em>.
-          Raises a single <code>ValueError</code> on empty series in divergence statistical tests
-          (PSI / KL / Jensen-Shannon / Hellinger) instead of divide-by-zero or silent NaNs. Fixes
-          <a href="https://github.com/evidentlyai/evidently/issues/1900">#1900</a>.
+          Patches under review on <strong>vLLM Production Stack</strong>
+          (<a href="https://github.com/vllm-project/production-stack/pull/1080">router latency accounting</a>)
+          and <strong>Evidently AI</strong>
+          (<a href="https://github.com/evidentlyai/evidently/pull/1924">safer empty-data statistical tests</a>).
         </li>
         <li>
           <strong>Kaggle Expert</strong> —
           <a href="https://www.kaggle.com/keyushnisar">keyushnisar</a>.
-          Competition work lives in
-          <a href="https://github.com/nisaral/Kaggle_notebooks">Kaggle_notebooks</a>.
-          DIO’s live validation also speaks the Hugging Face / OpenAI-compatible engine API against stock vLLM replicas
-          (Qwen2.5-3B on dual T4s); I use Hugging Face models throughout the research stack (XLM-RoBERTa, CLIP, Qwen)
-          even though I have not published a separate Hub profile yet.
+          Competitions, public notebooks, and dataset work aimed at putting usable data and methods
+          into the community rather than only climbing a private leaderboard.
+          Hosted a club competition so students ship on a public board.
         </li>
       </ul>
     </section>
@@ -278,7 +275,7 @@
     <section id="awards">
       <h2>Awards &amp; achievements</h2>
       <ul>
-        <li><strong>Nexus Kaggle competition</strong> (DJS NSDC &amp; Ultraceuticals) — 2nd runner-up, team Innov8Coders. Private-leaderboard F1 <strong>0.995647</strong> on drug-status prediction; 10 entries.</li>
+        <li><strong>Nexus Kaggle competition</strong> (DJS NSDC &amp; Ultraceuticals) — 2nd runner-up, team Innov8Coders. Private-leaderboard F1 <strong>0.995647</strong> on drug-status prediction.</li>
         <li><strong>CodeShastra XII</strong> (DJSCSI, 4–5 Apr 2026) — 2nd runner-up, team Bazinga. ERP-based AI FaithTech app. Prize: ₹25,000.</li>
         <li><strong>Hack2Infinity</strong> — Best in AI, mental-health app MindCompanion.</li>
         <li><strong>Catnip Infotech Hackathon</strong> — Runner-up, recommendation system.</li>
@@ -299,16 +296,17 @@
       <h2>Education</h2>
       <h3>D.J. Sanghvi College of Engineering, University of Mumbai <span class="when">Aug 2023 – 2027</span></h3>
       <p class="org">B.Tech in Artificial Intelligence and Machine Learning</p>
-      <ul>
-        <li>Core training in <strong>data structures, algorithms, probability &amp; statistics, linear algebra</strong>, and systems (OS, databases, networks).</li>
-        <li>Degree-level coursework in <strong>machine learning, deep learning, NLP, computer vision</strong>, with project work in RAG, LLM serving, and uncertainty.</li>
-      </ul>
+      <p>
+        Mathematics and systems underneath the models: probability, linear algebra, algorithms,
+        then machine learning, deep learning, NLP, and computer vision — used in the research above
+        rather than listed as a course catalog.
+      </p>
     </section>
 
     <section id="skills">
       <h2>Technical skills</h2>
       <div class="skills">
-        <p><strong>Research &amp; GenAI:</strong> RAG, transformers, PEFT / LoRA, diffusion models, uncertainty quantification, LLM evaluation, LangChain, LangGraph, Guardrails</p>
+        <p><strong>Research &amp; GenAI:</strong> transformers, PEFT / LoRA, diffusion models, uncertainty quantification, LLM evaluation, LangChain, LangGraph, agent harnesses</p>
         <p><strong>Languages &amp; frameworks:</strong> Python, Go, SQL, PyTorch, TensorFlow, scikit-learn, FastAPI</p>
         <p><strong>Systems:</strong> vLLM, OpenTelemetry, Kafka, gRPC, Docker, Kubernetes, PostgreSQL</p>
         <p><strong>Cloud &amp; monitoring:</strong> AWS, GCP, Arize Phoenix, Prometheus, Grafana, Hugging Face</p>
@@ -319,12 +317,6 @@
       <h2>Explore more of my work</h2>
       <p>
         <a href="files/Keyush_Nisar_CV.pdf"><strong>Curriculum Vitae</strong></a>
-        ·
-        <a href="files/Keyush_Nisar_Research_CV.pdf"><strong>Research CV</strong></a>
-        ·
-        <a href="files/DIO_paper.pdf"><strong>DIO manuscript</strong></a>
-        ·
-        <a href="files/VRAG_paper.pdf"><strong>VRAG manuscript</strong></a>
       </p>
     </section>
 
