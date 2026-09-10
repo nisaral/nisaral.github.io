@@ -1,4 +1,4 @@
-# keyushnisar.github.io
+# nisaral.github.io
 
 Academic homepage for **Keyush Nisar**.
 
