@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Keyush Nisar | Uncertainty, LLM Serving, and Evidence for Deployed AI</title>
+  <meta name="description" content="Keyush Nisar — B.Tech AI &amp; ML at D.J. Sanghvi College of Engineering. Research on uncertainty in learned systems, black-box LLM serving, and runtime evidence for multi-agent RAG." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/img/keyush.jpg" />
+</head>
+<body>
+  <nav class="topnav">
+    <div class="inner">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#codeai">CodeAI</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#opensource">Open source</a>
+      <a href="#awards">Awards</a>
+      <a href="#cv">CV</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <header class="hero">
+      <div>
+        <h1>Keyush Nisar</h1>
+        <p class="role">Researcher in uncertainty, LLM serving, and evidence for deployed AI</p>
+        <div class="socials" aria-label="Profiles">
+          <a href="https://github.com/nisaral" title="GitHub" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12.3c0 5.2 3.4 9.6 8.1 11.2.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 3 .1 3.3.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.4 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/keyush-n-017a3a2b3/" title="LinkedIn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5zM3 9h4v12H3zm7 0h3.8v1.6h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.3c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21h-4z"/></svg>
+          </a>
+          <a href="https://www.kaggle.com/keyushnisar" title="Kaggle" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.4 22 20.8h-4.4l-4.2-6.3-2.2 2.3V20.8H8V3.2h3.2v9.1l6.1-6.4H21z"/></svg>
+          </a>
+          <a href="mailto:nisarkeyush3@gmail.com" title="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.5L4.7 7.2 4 8l8 5.5L20 8l-.7-.8z"/></svg>
+          </a>
+          <a href="files/Keyush_Nisar_CV.pdf" title="CV">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm0 2.5 3.5 3.5H14zM8 13h8v1.5H8zm0 3h8v1.5H8zM8 10h5v1.5H8z"/></svg>
+          </a>
+        </div>
+        <p class="meta">
+          Email: <a href="mailto:nisarkeyush3@gmail.com">nisarkeyush3@gmail.com</a><br />
+          Mumbai, India ·
+          <a href="https://github.com/nisaral">github.com/nisaral</a> ·
+          <a href="https://www.kaggle.com/keyushnisar">kaggle.com/keyushnisar</a>
+        </p>
+      </div>
+      <img class="photo" src="assets/img/keyush.jpg" alt="Portrait of Keyush Nisar" />
+    </header>
+
+    <section class="stats" aria-label="Highlights">
+      <div class="stat"><b>Kaggle Expert</b><span>Competitions + hosted events</span></div>
+      <div class="stat"><b>2 papers</b><span>Springer venues, under review</span></div>
+      <div class="stat"><b>4 internships</b><span>London, VJTI, US, Mumbai</span></div>
+      <div class="stat"><b>CodeAI</b><span>Co-founder &amp; Technical Head</span></div>
+    </section>
+
+    <section id="about">
+      <h2>About me</h2>
+      <p>
+        Hi, I’m Keyush Nisar, a researcher and engineer working on <strong>uncertainty in learned systems</strong>,
+        <strong>black-box LLM serving</strong>, and <strong>runtime evidence for deployed AI</strong>.
+        I am pursuing a B.Tech in Artificial Intelligence and Machine Learning at
+        D.J. Sanghvi College of Engineering, University of Mumbai (2023–2027).
+        I have worked with RAI Tracker in London, CoE-CNDS Labs at VJTI, CerebralZip (a VJTI-incubated startup),
+        and EnsanAI, moving between research questions and production constraints.
+        I care about a simple test: whether a score is good enough to <em>rank</em> alternatives, or whether it is
+        honest enough to be treated as a <em>decision</em>. I enjoy collaborating across research and engineering,
+        and I am always open to conversations about graduate study and joint work. Feel free to reach out :)
+      </p>
+      <p><strong>Research interests:</strong></p>
+      <ul class="interests">
+        <li>Uncertainty-preserving distillation in world models, and when a score may be used as a decision</li>
+        <li>Black-box online routing and admission for heterogeneous vLLM replicas</li>
+        <li>Telemetry as evidence of behavioral drift in multi-agent retrieval-augmented systems</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">Uncertainty quantification</span>
+        <span class="chip">World models</span>
+        <span class="chip">LLM serving</span>
+        <span class="chip">RAG / agents</span>
+        <span class="chip">Trustworthy ML</span>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+
+      <h3>Independent research — Uncertainty-preserving distillation for diffusion world models <span class="when">2026 – Present</span></h3>
+      <p class="org">PyTorch · diffusion models · MBPO / SAC · <a href="https://github.com/nisaral/uncertainty-diffusion-world-models">GitHub</a></p>
+      <ul>
+        <li>Asked whether compressing a diffusion world model into a faster one-step student preserves the <strong>epistemic uncertainty</strong> needed for control, rather than only next-state accuracy.</li>
+        <li>Proved that a natural single-latent teacher–student disagreement match does not uniquely identify epistemic uncertainty; constructed counterexamples and derived a multi-latent objective that separately constrains epistemic and aleatoric components.</li>
+        <li>After tracing and fixing a training-pipeline bug, confirmed that the corrected objective recovers both uncertainty channels in controlled and live SAC experiments, and is now being tested for policy-return gains on a pre-registered harder benchmark.</li>
+      </ul>
+
+      <h3>MLE Research Intern — RAI Tracker (Responsible Systems Ltd) <span class="when">Apr 2026 – Jul 2026</span></h3>
+      <p class="org">Remote, London, UK · Supervisor: Dr. Rajeev Chakraborty</p>
+      <ul>
+        <li>Studied behavioral drift in multi-agent RAG systems, treating runtime telemetry as primary evidence for how a deployed system behaves across company-defined ethical dimensions.</li>
+        <li>Designed a three-gate validation framework — <strong>instrumentation validity, statistical validity, and evidentiary independence</strong> — that a candidate telemetry signal must pass before it is treated as evidence of an ethical-risk pattern.</li>
+        <li>Built hierarchical OpenTelemetry instrumentation, a system-agnostic telemetry/drift schema, and dashboards that turn traces into experimental verdicts. Continuing the work as a collaborative research manuscript.</li>
+      </ul>
+
+      <h3>Generative AI Research Intern — CoE-CNDS Labs, VJTI <span class="when">Feb 2025 – Jan 2026</span></h3>
+      <p class="org">Mumbai, India · Supervisors: Dr. Faruk Kazi, Aum Patil</p>
+      <ul>
+        <li>Fine-tuned <strong>XLM-RoBERTa</strong> with LoRA on a 23-language Indic corpus for low-resource multilingual NLP.</li>
+        <li>Worked on unstructured video understanding through a semantic VideoRAG pipeline, using CLIP-based vision-language representations for keyframe extraction and a rolling-gradient similarity method for temporal matching — work that feeds the VRAG paper below.</li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Research publications</h2>
+
+      <article class="pub">
+        Krishil Parikh, Krisha Maisheri, <strong>Keyush Nisar</strong>, Aruna Gawade, Nilesh Rathod, Angelin Florence.
+        Hierarchical Semantic Retrieval for Long-Form Video Question Answering (VRAG) |
+        <span class="venue">The Visual Computer, Springer</span> |
+        <span class="status">Under peer review</span>
+        <div class="links">
+          <a href="files/VRAG_paper.pdf">Manuscript</a>
+        </div>
+        <ul>
+          <li>Contributed to a three-level VideoRAG framework (topic → scene → keyframe) for coarse-to-fine evidence localization in long-form video.</li>
+          <li>Formulated the <strong>Gaussian-smoothed keyframe scoring</strong> method used for temporally stable retrieval.</li>
+          <li>Evaluated on 463 videos and 1,103 queries (YouCook2): <strong>42.2% Video R@1</strong>, <strong>57.0% Scene R@3</strong>, a <strong>3.7×</strong> recall gain over flat retrieval.</li>
+        </ul>
+      </article>
+
+      <article class="pub">
+        <strong>Keyush Nisar</strong>, Krishil Parikh, Krisha Maisheri, Aruna Gawade, Nilesh T. Rathod, Angelin Florence A.
+        DIO: Black-Box Online Routing for Heterogeneous vLLM Replicas |
+        <span class="venue">The Journal of Supercomputing, Springer</span> |
+        <span class="status">Under review</span>
+        <div class="links">
+          <a href="files/DIO_paper.pdf">Manuscript</a> ·
+          <a href="https://github.com/nisaral/DIO">Code</a>
+        </div>
+        <ul>
+          <li>Led the design of a lightweight OpenAI-compatible gateway over <em>stock</em> vLLM. Dual-timescale NLMS learns per-replica service-time slopes from black-box end-to-end telemetry; no engine patches.</li>
+          <li>Achieved <strong>48.3% lower p99 latency</strong> than Round-Robin under controlled 2× service-time asymmetry, with ~14µs control-plane overhead.</li>
+          <li>Main transferable finding is negative: a model that <em>ranks</em> replicas well can still over-reject ~40% of healthy traffic if its absolute predictions are used as an SLO gate. Ranking and admission have to be separate policies.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="experience">
+      <h2>Industry experience</h2>
+
+      <h3>Machine Learning Intern — CerebralZip <span class="when">Jul 2026 – Present</span></h3>
+      <p class="org">VJTI-incubated startup, Mumbai · government environmental and safety monitoring</p>
+      <ul>
+        <li>Building ML systems for multilingual incident classification, multi-issue detection in a single citizen report, automated department routing, and real-time alerts from noisy field text.</li>
+        <li>Developing time-series forecasting and source-attribution models, with evaluation and inference pipelines for government-facing deployments.</li>
+        <li>Prototyping ALPR / computer-vision pipelines for degraded footage — low light, blur, long distance — combining plate detection with OCR for enforcement workflows.</li>
+      </ul>
+
+      <h3>AI Production Engineering Intern — EnsanAI <span class="when">Aug 2025 – Apr 2026</span></h3>
+      <p class="org">Remote, Delaware, US · healthcare AI</p>
+      <ul>
+        <li>Designed a domain-specific healthcare AI evaluation covering HIPAA-oriented compliance, empathy, behavioral/data drift, and safety metrics across clinical workflows.</li>
+        <li>Deployed production AI microservices on GCP, stress-tested inference, and built an MCP server connecting database and operations tooling to downstream services; reduced inference cost by <strong>35%</strong> and latency by <strong>40%</strong>.</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Selected projects</h2>
+
+      <h3>LM-JEPA for symbolic regression <span class="when"><a href="https://github.com/nisaral/LM-JEPA-for-Symbolic-Regression">GitHub</a></span></h3>
+      <p class="org">PyTorch · representation learning · GSoC 2026 ML4SCI exploration</p>
+      <ul>
+        <li>Adapted Yann LeCun’s Joint Embedding Predictive Architecture from vision into symbolic regression, learning mathematical structure without autoregressive generation.</li>
+      </ul>
+
+      <h3>Voice-first financial agent <span class="when"><a href="https://github.com/nisaral/Finance_Agent">GitHub</a></span></h3>
+      <p class="org">FastAPI · LangGraph · OpenTelemetry</p>
+      <ul>
+        <li>Low-latency WebSocket voice agent with asynchronous streaming and VAD-driven interruption handling; sub-500ms time-to-first-audio.</li>
+        <li>OpenTelemetry traces for end-to-end latency and state transitions across a multi-stage tool-using agent.</li>
+      </ul>
+
+      <h3>Casual dynamical AI <span class="when"><a href="https://github.com/nisaral/Casual_dynamical_AI">GitHub</a> · 8 stars</span></h3>
+      <p class="org">World models · dynamical systems · PINNs</p>
+      <ul>
+        <li>First-principles notes and experiments on physics, calculus, and probabilistic graphs for agents that reason about structure rather than only next tokens. Currently the most-starred public repository on my GitHub.</li>
+      </ul>
+    </section>
+
+    <section id="codeai">
+      <h2>CodeAI — ML club at DJSCE</h2>
+      <p class="org">Technical Head, ML Mentor, and Co-founder · Jun 2025 – Present</p>
+      <p>
+        CodeAI is the machine-learning club I co-founded at D.J. Sanghvi. The job is not a title list:
+        it is to make a path into AI/ML that a first-year can actually walk — mathematics, then models,
+        then a project that can be measured.
+      </p>
+      <ul>
+        <li><strong>Mentorship.</strong> I mentor students through the basics of ML mathematics (linear algebra, probability, loss geometry) and then into practical pipelines: data, training, evaluation, and the difference between a demo and a result.</li>
+        <li><strong>Seminar — Roadmap to AI/ML.</strong> I delivered a staged roadmap seminar ( perceptrons through deep learning, with a “Deep Learning Adept” phase covering ANNs, CNNs, RNNs, transfer learning, PyTorch/TensorFlow, and a from-scratch CNN milestone). Glimpses from the session are below.</li>
+        <li><strong>CodeQuest Kaggle competition.</strong> As part of the CodeQuest hackathon I hosted a Kaggle competition; <strong>25+ teams</strong> participated. The point was to put club members on a public leaderboard rather than a classroom assignment.</li>
+        <li><strong>Aspira Pathology Lab.</strong> Directed a student team building an AI engine for automated prescription interpretation. I worked on the <strong>OCR stack</strong> and on the plan for an MIS dashboard with AI insights over a 3,500+ test catalog; the interpretation engine reached <strong>92%+ accuracy</strong>.</li>
+      </ul>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching &amp; talks</h2>
+      <h3>Roadmap to AI/ML | <em>CodeAI, DJSCE</em></h3>
+      <p>
+        A live seminar on how to enter AI/ML without skipping the mathematics. The clips below are short
+        glimpses from the session — podium, slide deck, and the Phase 3 deep-learning block
+        (ANNs / CNNs / RNNs, transfer learning, Hugging Face Transformers, and a ResNet-style classification milestone).
+      </p>
+      <div class="clips">
+        <figure>
+          <video controls preload="metadata" poster="assets/img/seminar-1.jpg" src="assets/video/seminar-1.mp4"></video>
+          <figcaption>Opening the roadmap — live session at DJSCE</figcaption>
+        </figure>
+        <figure>
+          <video controls preload="metadata" poster="assets/img/seminar-2.jpg" src="assets/video/seminar-2.mp4"></video>
+          <figcaption>Phase 3: Deep Learning Adept</figcaption>
+        </figure>
+        <figure>
+          <video controls preload="metadata" poster="assets/img/seminar-3.jpg" src="assets/video/seminar-3.mp4"></video>
+          <figcaption>CNNs, transfer learning, and a from-scratch milestone</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="opensource">
+      <h2>Open source &amp; community</h2>
+      <p>
+        GitHub <a href="https://github.com/nisaral">@nisaral</a>: 28 public repositories, 22 followers.
+        Work that is public and worth a look: <a href="https://github.com/nisaral/Casual_dynamical_AI">Casual_dynamical_AI</a> (8 stars),
+        <a href="https://github.com/nisaral/uncertainty-diffusion-world-models">uncertainty-diffusion-world-models</a> (4),
+        <a href="https://github.com/nisaral/DIO">DIO</a> (3).
+      </p>
+      <ul>
+        <li>
+          <strong>vLLM Production Stack</strong> —
+          <a href="https://github.com/vllm-project/production-stack/pull/1080">PR #1080</a>
+          <em>(under review)</em>.
+          Router stats bugfix: <code>avg_latency</code> now uses the supplied completion timestamp instead of
+          <code>time.time()</code>, and completed request maps are dropped. Adds a unit test that the latency
+          equals the injected interval.
+        </li>
+        <li>
+          <strong>Evidently AI</strong> —
+          <a href="https://github.com/evidentlyai/evidently/pull/1924">PR #1924</a>
+          <em>(under review)</em>.
+          Raises a single <code>ValueError</code> on empty series in divergence statistical tests
+          (PSI / KL / Jensen-Shannon / Hellinger) instead of divide-by-zero or silent NaNs. Fixes
+          <a href="https://github.com/evidentlyai/evidently/issues/1900">#1900</a>.
+        </li>
+        <li>
+          <strong>Kaggle Expert</strong> —
+          <a href="https://www.kaggle.com/keyushnisar">keyushnisar</a>.
+          Competition work lives in
+          <a href="https://github.com/nisaral/Kaggle_notebooks">Kaggle_notebooks</a>.
+          DIO’s live validation also speaks the Hugging Face / OpenAI-compatible engine API against stock vLLM replicas
+          (Qwen2.5-3B on dual T4s); I use Hugging Face models throughout the research stack (XLM-RoBERTa, CLIP, Qwen)
+          even though I have not published a separate Hub profile yet.
+        </li>
+      </ul>
+    </section>
+
+    <section id="awards">
+      <h2>Awards &amp; achievements</h2>
+      <ul>
+        <li><strong>Nexus Kaggle competition</strong> (DJS NSDC &amp; Ultraceuticals) — 2nd runner-up, team Innov8Coders. Private-leaderboard F1 <strong>0.995647</strong> on drug-status prediction; 10 entries.</li>
+        <li><strong>CodeShastra XII</strong> (DJSCSI, 4–5 Apr 2026) — 2nd runner-up, team Bazinga. ERP-based AI FaithTech app. Prize: ₹25,000.</li>
+        <li><strong>Hack2Infinity</strong> — Best in AI, mental-health app MindCompanion.</li>
+        <li><strong>Catnip Infotech Hackathon</strong> — Runner-up, recommendation system.</li>
+      </ul>
+      <div class="gallery">
+        <figure>
+          <img src="assets/img/kaggle-nexus.jpg" alt="Nexus Kaggle private leaderboard, Innov8Coders in third with F1 0.995647" />
+          <figcaption>Nexus private leaderboard — Innov8Coders, 3rd, F1 0.995647</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/codeshastra.jpg" alt="Keyush holding the CodeShastra XII second runners-up cheque for twenty-five thousand rupees" />
+          <figcaption>CodeShastra XII — Second Runners Up, ₹25,000</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <h3>D.J. Sanghvi College of Engineering, University of Mumbai <span class="when">Aug 2023 – 2027</span></h3>
+      <p class="org">B.Tech in Artificial Intelligence and Machine Learning</p>
+      <ul>
+        <li>Core training in <strong>data structures, algorithms, probability &amp; statistics, linear algebra</strong>, and systems (OS, databases, networks).</li>
+        <li>Degree-level coursework in <strong>machine learning, deep learning, NLP, computer vision</strong>, with project work in RAG, LLM serving, and uncertainty.</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Technical skills</h2>
+      <div class="skills">
+        <p><strong>Research &amp; GenAI:</strong> RAG, transformers, PEFT / LoRA, diffusion models, uncertainty quantification, LLM evaluation, LangChain, LangGraph, Guardrails</p>
+        <p><strong>Languages &amp; frameworks:</strong> Python, Go, SQL, PyTorch, TensorFlow, scikit-learn, FastAPI</p>
+        <p><strong>Systems:</strong> vLLM, OpenTelemetry, Kafka, gRPC, Docker, Kubernetes, PostgreSQL</p>
+        <p><strong>Cloud &amp; monitoring:</strong> AWS, GCP, Arize Phoenix, Prometheus, Grafana, Hugging Face</p>
+      </div>
+    </section>
+
+    <section id="cv">
+      <h2>Explore more of my work</h2>
+      <p>
+        <a href="files/Keyush_Nisar_CV.pdf"><strong>Curriculum Vitae</strong></a>
+        ·
+        <a href="files/Keyush_Nisar_Research_CV.pdf"><strong>Research CV</strong></a>
+        ·
+        <a href="files/DIO_paper.pdf"><strong>DIO manuscript</strong></a>
+        ·
+        <a href="files/VRAG_paper.pdf"><strong>VRAG manuscript</strong></a>
+      </p>
+    </section>
+
+    <footer>
+      Keyush Nisar — <a href="mailto:nisarkeyush3@gmail.com">nisarkeyush3@gmail.com</a> — references on request
+    </footer>
+  </main>
+</body>
+</html>
