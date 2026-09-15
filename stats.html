@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Visitors · Keyush Nisar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/img/keyush.jpg" />
+</head>
+<body>
+  <nav class="topnav">
+    <div class="inner">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="stats.html">Visitors</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <header class="hero" style="grid-template-columns: 1fr; border-bottom: 0; padding-bottom: 0;">
+      <div>
+        <h1>Visitors</h1>
+        <p class="role">How many people opened the site, and from where. Browsers do not send names — this is location, referrer, and device, not identity.</p>
+      </div>
+    </header>
+
+    <section class="statgrid" aria-label="Counts">
+      <div class="stat"><b id="c-opens">—</b><span>Page opens</span></div>
+      <div class="stat"><b id="c-today">—</b><span>Opens today</span></div>
+      <div class="stat"><b id="c-unique">—</b><span>Unique browsers (this counter)</span></div>
+    </section>
+
+    <h2>This visit</h2>
+    <p class="note" id="this-visit">Looking up this connection…</p>
+
+    <h2>Recent opens on this browser</h2>
+    <p class="note">A public homepage cannot see a visitor’s name. What we can store locally on <em>your</em> machine is the last lookup from this browser. Counts above are site-wide.</p>
+    <table class="visitors" id="last-table">
+      <thead>
+        <tr><th>When</th><th>Where</th><th>Device</th><th>Came from</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <p class="note" style="margin-top:1.2rem;">
+      For a running country / referrer breakdown, create a free
+      <a href="https://www.goatcounter.com">GoatCounter</a> site with the code <strong>nisaral</strong>
+      (takes a minute). The tracker is already on the homepage; stats then appear at
+      <a href="https://nisaral.goatcounter.com">nisaral.goatcounter.com</a>.
+    </p>
+
+    <footer>
+      <a href="index.html">← Back to the homepage</a>
+    </footer>
+  </main>
+  <script>
+    (function () {
+      function fmt(n) { return Number(n || 0).toLocaleString(); }
+      function hit(key) {
+        return fetch("https://hitscounter.dev/api/hit?url=" + encodeURIComponent(key) + "&output=json", { cache: "no-store" })
+          .then(function (r) { return r.json(); });
+      }
+      function set(id, v) { var el = document.getElementById(id); if (el) el.textContent = v; }
+
+      var cachedOpens = localStorage.getItem("kn_opens");
+      var cachedUnique = localStorage.getItem("kn_uniques");
+      if (cachedOpens) {
+        var o = JSON.parse(cachedOpens);
+        set("c-opens", fmt(o.total_hits));
+        set("c-today", fmt(o.today_hits));
+      }
+      if (cachedUnique) set("c-unique", fmt(JSON.parse(cachedUnique).total_hits));
+
+      var last = localStorage.getItem("kn_last");
+      var tbody = document.querySelector("#last-table tbody");
+      if (last && tbody) {
+        var row = JSON.parse(last);
+        var where = [row.city, row.region, row.country].filter(Boolean).join(", ") || "Unknown";
+        var when = row.t ? new Date(row.t).toLocaleString() : "—";
+        tbody.innerHTML = "<tr><td>" + when + "</td><td>" + where + "</td><td>" + (row.device || "") + "</td><td class='ref'>" + (row.ref || "direct") + "</td></tr>";
+        document.getElementById("this-visit").textContent = where + " · " + (row.device || "") + " · " + (row.ref === "direct" ? "typed or bookmarked" : row.ref);
+      } else {
+        document.getElementById("this-visit").textContent = "No lookup stored in this browser yet. Open the homepage once, then return here.";
+      }
+
+      hit("https://nisaral.github.io").then(function (o) {
+        localStorage.setItem("kn_opens", JSON.stringify(o));
+        set("c-opens", fmt(o.total_hits));
+        set("c-today", fmt(o.today_hits));
+      }).catch(function () {});
+    })();
+  </script>
+</body>
+</html>

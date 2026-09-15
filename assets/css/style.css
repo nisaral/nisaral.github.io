@@ -250,6 +250,36 @@ footer {
   color: var(--muted);
   font-size: 0.9rem;
 }
+.foot-stats { white-space: nowrap; }
+
+.statgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem;
+  margin: 1.2rem 0 1.4rem;
+}
+.note {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+table.visitors {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+table.visitors th,
+table.visitors td {
+  text-align: left;
+  padding: 0.45rem 0.35rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+table.visitors th { color: var(--muted); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.ref { word-break: break-all; color: var(--muted); font-size: 0.85rem; }
+
+@media (max-width: 720px) {
+  .statgrid { grid-template-columns: 1fr; }
+}
 
 @media (max-width: 720px) {
   header.hero { grid-template-columns: 1fr; }
